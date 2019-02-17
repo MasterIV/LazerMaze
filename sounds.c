@@ -29,6 +29,10 @@ void setNote(Note *n){
                    
             break;
             case WAVE:
+            NR41_REG = 0x3A;
+                NR42_REG = 0xA1;     
+                NR43_REG = 0x78;         
+                NR44_REG = 0xC0U;
 
             break;
             case CYMBAL:
@@ -36,7 +40,6 @@ void setNote(Note *n){
                 NR42_REG = 55;     
                 NR43_REG = 50;         
                 NR44_REG = 0xC0U;
-                NR51_REG |= 0x88;
             break;
     }
 }
@@ -68,11 +71,11 @@ void update_music() {
 }
 
 void move_cursor_sound() {
-    NR10_REG = 0x15;
-    NR11_REG = 0x96;
-    NR12_REG = 0x73;
-    NR13_REG = 0xBB;
-    NR14_REG = 0x85;
+    NR10_REG = 0x4F;
+    NR11_REG = 0x80;
+    NR12_REG = 0x71;
+    NR13_REG = 0x90;
+    NR14_REG = 0x81;
 }
 
 void explosion_sound() {

@@ -3,10 +3,6 @@
 #include "tiles.c"
 #include "sounds.c"
 
-UBYTE level_objects[72];
-UBYTE current_level[360];
-UBYTE level = 0;
-UBYTE defeat; // init in display_level
 
 
 // bank 1: title screen
@@ -21,9 +17,13 @@ void display_defeat();
 void show_level(UBYTE level, UBYTE *dest);
 void display_level();
 
+UBYTE level_objects[72];
+UBYTE current_level[360];
+UBYTE level = 0;
 
 #include "lazer.c"
 #include "background.c"
+#include "mines.c"
 #include "transition.c"
 #include "cursor.c"
 
@@ -35,13 +35,13 @@ void display_title() {
 void display_level() {
   SWITCH_ROM_MBC1(2);
   DISPLAY_OFF;
-  defeat = 0;
 
   init_background(&current_level);
   show_level(level, level_objects);
   
   update_background(&level_objects, &current_level);
   set_bkg_tiles(0, 0, 20, 18, current_level);
+  detonated = 0;
 	
   cursor_reset();
   DISPLAY_ON;  
@@ -83,13 +83,12 @@ void main() {
   display_level();
   cursor_init();
   
-  
   while(1) {
-    if (defeat) {
-		check_transition();
+    if (detonated) {
+		update_mines();
 	} else {
+		cursor_update();
 	}
-			cursor_update();
 
 	update_music();
 	wait_vbl_done();

@@ -91,10 +91,6 @@ void cursor_move(WORD x, WORD y) {
 
 void cursor_update() {
   UBYTE keys, i, j;
-  
-  if (defeat) {
-  	return;
-  }
   keys = joypad();
   
   if(counter == 0) {

@@ -40,7 +40,7 @@ void display_end() {
 }
 
 void display_level() {
-  if(level > 9 ) {
+  if(level > 10 ) {
   	loop = 0;
 	display_end();
 	return;

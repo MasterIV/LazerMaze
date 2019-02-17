@@ -2,21 +2,23 @@ const UBYTE level1[] = {
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
 MapObjective, MapEmpty, MapEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
+MapFixedEmpty, MapEmpty, MapEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
-MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
-MapEmpty, MapEmpty, MapEmpty, MapMovableObstacle, 
-MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
+MapEmpty, MapFixedEmpty, MapEmpty, MapMovableObstacle, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
+MapMovableObstacle, MapEmpty, MapEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapGenerator, 
-MapEmpty, MapEmpty, MapEmpty, MapEmpty
+MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
+
+
 };
 
 const UBYTE level2[] = {
@@ -46,7 +48,7 @@ MapEmpty, MapEmpty, MapEmpty, MapEmpty,
 MapEmpty, MapEmpty, MapEmpty, MapObjective, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapMirrorRight, 
-MapEmpty, MapEmpty, MapSplitterDown, MapEmpty, 
+MapEmpty, MapEmpty, MapSplitterUp, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapObjective, MapEmpty, 
@@ -65,7 +67,7 @@ const UBYTE level4[] = {
 MapEmpty, MapEmpty, MapEmpty, MapMine, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
-MapEmpty, MapEmpty, MapSplitterDown, MapEmpty, 
+MapEmpty, MapEmpty, MapSplitterUp, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
@@ -83,31 +85,31 @@ MapEmpty, MapEmpty, MapEmpty, MapEmpty
 };
 
 const UBYTE level5[] = {
-MapEmpty, MapEmpty, MapSplitterDown, MapMirrorRight, 
-MapEmpty, MapEmpty, MapSplitterUp, MapEmpty, 
+MapEmpty, MapEmpty, MapSplitterUp, MapMirrorRight, 
+MapEmpty, MapEmpty, MapSplitterDown, MapEmpty, 
 MapMirrorRight, MapObjective, MapMirrorRight, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
-MapSplitterUp, MapObjective, MapObjective, MapEmpty, 
+MapSplitterDown, MapObjective, MapObjective, MapEmpty, 
 MapEmpty, MapEmpty, MapSplitterLeft, MapSplitterRight, 
-MapSplitterDown, MapMirrorLeft, MapObjective, MapObjective, 
-MapEmpty, MapMovableEmpty, MapEmpty, MapEmpty, 
+MapSplitterUp, MapMirrorLeft, MapObjective, MapObjective, 
+MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
 MapMirrorRight, MapEmpty, MapEmpty, MapObjective, 
-MapObjective, MapEmpty, MapMovableEmpty, MapSplitterDown, 
+MapObjective, MapEmpty, MapEmpty, MapSplitterUp, 
 MapEmpty, MapEmpty, MapSplitterRight, MapEmpty, 
-MapObjective, MapObjective, MapSplitterUp, MapMirrorRight, 
-MapMovableEmpty, MapSplitterDown, MapMirrorLeft, MapEmpty, 
+MapObjective, MapObjective, MapSplitterDown, MapMirrorRight, 
+MapMovableEmpty, MapSplitterUp, MapMirrorLeft, MapEmpty, 
 MapEmpty, MapObjective, MapObjective, MapEmpty, 
-MapSplitterDown, MapMirrorRight, MapEmpty, MapEmpty, 
-MapMovableEmpty, MapEmpty, MapObjective, MapEmpty, 
+MapSplitterUp, MapMirrorRight, MapEmpty, MapEmpty, 
+MapEmpty, MapEmpty, MapObjective, MapEmpty, 
 MapEmpty, MapMirrorLeft, MapEmpty, MapGenerator, 
-MapEmpty, MapEmpty, MapEmpty, MapSplitterUp
+MapEmpty, MapEmpty, MapEmpty, MapSplitterDown
 };
 
 const UBYTE level6[] = {
 MapEmpty, MapObjective, MapMovableEmpty, MapMovableObstacle, 
-MapMovableEmpty, MapEmpty, MapSplitterLeft, MapObjective, 
+MapMovableEmpty, MapEmpty, MapSplitterLeft, MapEmpty, 
 MapEmpty, MapMine, MapMovableEmpty, MapEmpty, 
-MapSplitterDown, MapEmpty, MapMirrorRight, MapMovableEmpty, 
+MapSplitterUp, MapEmpty, MapMirrorRight, MapMovableEmpty, 
 MapMovableEmpty, MapObjective, MapEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapObstacle, MapObstacle, 
 MapObstacle, MapEmpty, MapMovableEmpty, MapEmpty, 
@@ -121,7 +123,7 @@ MapEmpty, MapEmpty, MapEmpty, MapObjective,
 MapEmpty, MapMirrorRight, MapObstacle, MapEmpty, 
 MapGenerator, MapMirrorRight, MapMovableEmpty, MapMovableEmpty, 
 MapEmpty, MapMovableObstacle, MapMine, MapObstacle, 
-MapEmpty, MapSplitterDown, MapMovableEmpty, MapEmpty
+MapEmpty, MapSplitterUp, MapMovableEmpty, MapEmpty
 };
 
 const UBYTE level7[] = {
@@ -171,18 +173,42 @@ MapEmpty, MapMine, MapEmpty, MapEmpty,
 MapEmpty, MapObjective, MapObjective, MapObjective, 
 MapEmpty, MapObjective, MapEmpty, MapMovableEmpty, 
 MapEmpty, MapEmpty, MapSplitterLeft, MapEmpty, 
-MapSplitterDown, MapMine, MapObjective, MapMovableEmpty, 
+MapSplitterUp, MapMine, MapObjective, MapMovableEmpty, 
 MapEmpty, MapEmpty, MapMovableEmpty, MapEmpty, 
 MapEmpty, MapMovableEmpty, MapEmpty, MapObjective, 
-MapEmpty, MapSplitterUp, MapEmpty, MapMovableEmpty, 
+MapEmpty, MapSplitterDown, MapEmpty, MapMovableEmpty, 
 MapSplitterLeft, MapEmpty, MapMovableEmpty, MapEmpty, 
 MapEmpty, MapSplitterRight, MapMovableEmpty, MapMovableEmpty, 
-MapEmpty, MapSplitterDown, MapMirrorRight, MapMovableEmpty, 
+MapEmpty, MapSplitterUp, MapMirrorRight, MapMovableEmpty, 
 MapObjective, MapEmpty, MapEmpty, MapSplitterRight, 
-MapEmpty, MapEmpty, MapSplitterUp, MapSplitterDown, 
+MapEmpty, MapEmpty, MapSplitterDown, MapSplitterUp, 
 MapMovableEmpty, MapObjective, MapMine, MapSplitterRight, 
-MapEmpty, MapSplitterUp, MapMovableEmpty, MapEmpty, 
+MapEmpty, MapSplitterDown, MapMovableEmpty, MapEmpty, 
 MapMovableEmpty, MapEmpty, MapObjective, MapEmpty, 
 MapObjective, MapObjective, MapObjective, MapGenerator, 
 MapMovableEmpty, MapEmpty, MapMine, MapEmpty
+};
+
+const UBYTE level10[] = {
+MapEmpty, MapMovableEmpty, MapFixedEmpty, MapEmpty, 
+MapEmpty, MapEmpty, MapEmpty, MapMirrorLeft, 
+MapEmpty, MapSplitterUp, MapMovableEmpty, MapFixedEmpty, 
+MapEmpty, MapObjective, MapEmpty, MapEmpty, 
+MapFixedEmpty, MapFixedEmpty, MapMovableEmpty, MapMirrorRight, 
+MapFixedEmpty, MapObstacle, MapObstacle, MapObstacle, 
+MapFixedEmpty, MapFixedEmpty, MapFixedEmpty, MapFixedEmpty, 
+MapFixedEmpty, MapFixedEmpty, MapEmpty, MapEmpty, 
+MapMirrorLeft, MapFixedEmpty, MapEmpty, MapEmpty, 
+MapSplitterDown, MapEmpty, MapFixedEmpty, MapMirrorRight, 
+MapMirrorRight, MapEmpty, MapFixedEmpty, MapSplitterRight, 
+MapEmpty, MapEmpty, MapMirrorLeft, MapFixedEmpty, 
+MapFixedEmpty, MapFixedEmpty, MapFixedEmpty, MapFixedEmpty, 
+MapObjective, MapEmpty, MapSplitterLeft, MapEmpty, 
+MapObjective, MapEmpty, MapEmpty, MapGenerator, 
+MapFixedEmpty, MapMirrorRight, MapEmpty, MapEmpty, 
+MapEmpty, MapFixedEmpty, MapEmpty, MapMirrorRight, 
+MapMirrorLeft, MapFixedEmpty, MapEmpty, MapEmpty, 
+
+
+
 };

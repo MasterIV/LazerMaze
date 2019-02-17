@@ -91,6 +91,10 @@ void cursor_move(WORD x, WORD y) {
 
 void cursor_update() {
   UBYTE keys, i, j;
+  
+  if (defeat) {
+  	return;
+  }
   keys = joypad();
   
   if(counter == 0) {
@@ -100,6 +104,10 @@ void cursor_update() {
 	  case J_LEFT: cursor_move(-2, 0); break;
 	  case J_RIGHT: cursor_move(2, 0); break;
 	  case J_A: cursor_toggle(); break;
+	  case J_SELECT:
+	  	level++;
+		display_level();
+	  	break;
 	}
   } else {
 	cursor.x += cursor.dir_x;

@@ -19,11 +19,12 @@ void show_level(UBYTE level, UBYTE *dest) {
   	case 1: copy_map(dest, &level2); break;
   	case 2: copy_map(dest, &level3); break;
   	case 3: copy_map(dest, &level4); break;
-  	case 4: copy_map(dest, &level5); break;
+  	case 4: copy_map(dest, &level7); break;
   	case 5: copy_map(dest, &level6); break;
-  	case 6: copy_map(dest, &level7); break;
-  	case 7: copy_map(dest, &level8); break;
-  	case 8: copy_map(dest, &level9); break;
+  	case 6: copy_map(dest, &level8); break;
+  	case 7: copy_map(dest, &level9); break;
+  	case 8: copy_map(dest, &level5); break;
+	case 9: copy_map(dest, &level10); break;
   	default: copy_map(dest, &level1);
   }
 }

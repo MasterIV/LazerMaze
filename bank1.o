@@ -1,6 +1,6 @@
 XL
 H A areas E global symbols
-M lcc250880
+M lcc317250
 S _move_sprite Ref0000
 S _display_off Ref0000
 S _set_bkg_data Ref0000

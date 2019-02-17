@@ -6,6 +6,8 @@
 UBYTE level_objects[72];
 UBYTE current_level[360];
 UBYTE level = 0;
+UBYTE defeat; // init in display_level
+
 
 // bank 1: title screen
 void show_title();
@@ -33,7 +35,8 @@ void display_title() {
 void display_level() {
   SWITCH_ROM_MBC1(2);
   DISPLAY_OFF;
-  
+  defeat = 0;
+
   init_background(&current_level);
   show_level(level, level_objects);
   
@@ -61,10 +64,13 @@ void main() {
   VBK_REG = 0;
   
   SHOW_BKG;
+  init_sound();
   
   display_title();
-  DISPLAY_ON;  
+  DISPLAY_ON;
+  title_sound();
   waitpad(255);
+  explosion_sound();
   
   printf(" \n Move the elements\n in the level to\n hit all objectives\n with the laser.\n\n");
   printf(" Use the arrors to\n movethe cursor.\n\n");
@@ -76,10 +82,16 @@ void main() {
   SHOW_SPRITES;
   display_level();
   cursor_init();
-  init_sound();
+  
   
   while(1) {
-	cursor_update();
+    if (defeat) {
+		check_transition();
+	} else {
+	}
+			cursor_update();
+
+	update_music();
 	wait_vbl_done();
   }
 }

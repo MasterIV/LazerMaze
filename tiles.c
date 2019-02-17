@@ -12,3 +12,5 @@
 #define MapObjective 104
 #define MapMine 132
 #define MapFixedEmpty 140
+#define MineAnimation 156
+#define MineRingAnimation 160

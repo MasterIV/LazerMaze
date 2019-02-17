@@ -99,11 +99,11 @@ void cursor_update() {
 	  case J_DOWN: cursor_move(0, 2); break;
 	  case J_LEFT: cursor_move(-2, 0); break;
 	  case J_RIGHT: cursor_move(2, 0); break;
-	  case J_A: cursor_toggle(); break;
+	  case J_A: cursor_toggle(); return;
 	  case J_SELECT:
 	  	level++;
 		display_level();
-	  	break;
+	  	return;
 	}
   } else {
 	cursor.x += cursor.dir_x;

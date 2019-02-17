@@ -4,7 +4,6 @@
 #include "sounds.c"
 
 
-
 // bank 1: title screen
 void show_title();
 void display_title();
@@ -12,6 +11,8 @@ void show_victory();
 void display_victory();
 void show_defeat();
 void display_defeat();
+void show_end();
+void display_end();
 
 // bank 2: levels
 void show_level(UBYTE level, UBYTE *dest);
@@ -20,6 +21,7 @@ void display_level();
 UBYTE level_objects[72];
 UBYTE current_level[360];
 UBYTE level = 0;
+UBYTE loop = 1;
 
 #include "lazer.c"
 #include "background.c"
@@ -32,7 +34,18 @@ void display_title() {
   show_title();
 }
 
+void display_end() {
+  SWITCH_ROM_MBC1(1);
+  show_end();
+}
+
 void display_level() {
+  if(level > 9 ) {
+  	loop = 0;
+	display_end();
+	return;
+  }
+
   SWITCH_ROM_MBC1(2);
   DISPLAY_OFF;
 
@@ -83,7 +96,7 @@ void main() {
   display_level();
   cursor_init();
   
-  while(1) {
+  while(loop) {
     if (detonated) {
 		update_mines();
 	} else {

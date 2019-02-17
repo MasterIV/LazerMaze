@@ -6,6 +6,8 @@
 #include "complete_img.map"
 #include "loose_pallet.tiles"
 #include "loose_img.map"
+#include "end_pallet.tiles"
+#include "end_img.map"
 
 void reset_sprites() {
   int i;
@@ -27,6 +29,14 @@ void show_defeat() {
   reset_sprites();
   set_bkg_data(0, 240, loose_pallet);
   set_bkg_tiles(0, 0, 20, 18, loose_img);
+  DISPLAY_ON;
+}
+
+void show_end() {
+  DISPLAY_OFF;
+  reset_sprites();
+  set_bkg_data(0, 123, end_pallet);
+  set_bkg_tiles(0, 0, 20, 18, end_img);
   DISPLAY_ON;
 }
 

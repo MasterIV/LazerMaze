@@ -6,7 +6,8 @@ UBYTE mines[24];
 
 void detonate_mines() {
 	UBYTE i, j;
-	
+	mine_windup_sound();
+
 	for(i=0;i!=detonated;i++) {
 		j = i<<1;
 			
@@ -17,6 +18,7 @@ void detonate_mines() {
 		move_sprite(17+j, mines[j], mines[j+1]);
 		set_sprite_prop(17+j, 0);
 	}
+
 	
 	detonation_frames = 120;
 }
@@ -37,7 +39,7 @@ void update_mines() {
 		for(i=0;i!=detonated;i++) {
 			j = i<<1;
 			set_sprite_tile(16+j, MineAnimation + current);
-			
+			mine_windup_sound();
 			switch (current) {
 				case 0 :
 				  set_sprite_prop(17+j, 0);

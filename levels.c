@@ -85,6 +85,28 @@ MapEmpty, MapEmpty, MapEmpty, MapEmpty
 };
 
 const UBYTE level5[] = {
+MapEmpty, MapObjective, MapEmpty, MapEmpty, 
+MapEmpty, MapEmpty, MapFixedEmpty, MapEmpty, 
+MapMine, MapEmpty, MapEmpty, MapEmpty, 
+MapEmpty, MapSplitterUp, MapEmpty, MapEmpty, 
+MapEmpty, MapEmpty, MapEmpty, MapMine, 
+MapFixedEmpty, MapEmpty, MapEmpty, MapEmpty, 
+MapMirrorLeft, MapEmpty, MapEmpty, MapEmpty, 
+MapEmpty, MapEmpty, MapEmpty, MapGenerator, 
+MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
+MapMovableObstacle, MapMirrorRight, MapEmpty, MapSplitterDown, 
+MapObjective, MapFixedEmpty, MapObstacle, MapEmpty, 
+MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
+MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
+MapEmpty, MapEmpty, MapMine, MapEmpty, 
+MapEmpty, MapMirrorRight, MapEmpty, MapEmpty, 
+MapEmpty, MapFixedEmpty, MapEmpty, MapEmpty, 
+MapEmpty, MapEmpty, MapMirrorRight, MapEmpty, 
+MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
+
+};
+
+const UBYTE level6[] = {
 MapEmpty, MapEmpty, MapSplitterUp, MapMirrorRight, 
 MapEmpty, MapEmpty, MapSplitterDown, MapEmpty, 
 MapMirrorRight, MapObjective, MapMirrorRight, MapEmpty, 
@@ -105,7 +127,7 @@ MapEmpty, MapMirrorLeft, MapEmpty, MapGenerator,
 MapEmpty, MapEmpty, MapEmpty, MapSplitterDown
 };
 
-const UBYTE level6[] = {
+const UBYTE level7[] = {
 MapEmpty, MapObjective, MapMovableEmpty, MapMovableObstacle, 
 MapMovableEmpty, MapEmpty, MapSplitterLeft, MapEmpty, 
 MapEmpty, MapMine, MapMovableEmpty, MapEmpty, 
@@ -126,7 +148,7 @@ MapEmpty, MapMovableObstacle, MapMine, MapObstacle,
 MapEmpty, MapSplitterUp, MapMovableEmpty, MapEmpty
 };
 
-const UBYTE level7[] = {
+const UBYTE level8[] = {
 MapEmpty, MapEmpty, MapEmpty, MapMine, 
 MapEmpty, MapEmpty, MapMine, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
@@ -147,7 +169,7 @@ MapFixedEmpty, MapGenerator, MapEmpty, MapEmpty,
 MapEmpty, MapEmpty, MapMirrorRight, MapEmpty, 
 };
 
-const UBYTE level8[] = {
+const UBYTE level9[] = {
 MapEmpty, MapEmpty, MapObstacle, MapMovableObstacle, 
 MapObjective, MapMovableObstacle, MapObstacle, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapObstacle, 
@@ -168,7 +190,7 @@ MapEmpty, MapObstacle, MapMovableObstacle, MapGenerator,
 MapMovableObstacle, MapObstacle, MapEmpty, MapEmpty
 };
 
-const UBYTE level9[] = {
+const UBYTE level10[] = {
 MapEmpty, MapMine, MapEmpty, MapEmpty, 
 MapEmpty, MapObjective, MapObjective, MapObjective, 
 MapEmpty, MapObjective, MapEmpty, MapMovableEmpty, 
@@ -189,7 +211,7 @@ MapObjective, MapObjective, MapObjective, MapGenerator,
 MapMovableEmpty, MapEmpty, MapMine, MapEmpty
 };
 
-const UBYTE level10[] = {
+const UBYTE level11[] = {
 MapEmpty, MapMovableEmpty, MapFixedEmpty, MapEmpty, 
 MapEmpty, MapEmpty, MapEmpty, MapMirrorLeft, 
 MapEmpty, MapSplitterUp, MapMovableEmpty, MapFixedEmpty, 

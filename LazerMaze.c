@@ -63,6 +63,7 @@ void display_level() {
 void display_victory() {
   SWITCH_ROM_MBC1(1);
   show_victory();
+  victory_sound();
 }
 
 void display_defeat() {
@@ -86,7 +87,7 @@ void main() {
   explosion_sound();
   
   printf(" \n Move the elements\n in the level to\n hit all objectives\n with the laser.\n\n");
-  printf(" Use the arrors to\n movethe cursor.\n\n");
+  printf(" Use the arrows to\n move the cursor.\n\n");
   printf(" Press A to move an\n element. Only some\n elements can be\n moved.\n\n");
   printf(" Press start to\n continue\n");
   

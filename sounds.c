@@ -85,6 +85,14 @@ void explosion_sound() {
     NR44_REG = 0xC0;
 }
 
+void mine_windup_sound() {
+    NR10_REG = 0x7D;
+    NR11_REG = 0x81;
+    NR12_REG = 0xF1;
+    NR13_REG = 0x7D;
+    NR14_REG = 0x87;
+}
+
 void title_sound() {
     setNote(&game_ch1[0]);
     setNote(&game_ch1[1]);

@@ -17,7 +17,7 @@ void check_transition() {
 		
 	if(detonated) {
 		detonate_mines();
-	} if(!objectives) {
+	} else if (!objectives) {
 		delay(500);
 		level++;
 		display_victory();

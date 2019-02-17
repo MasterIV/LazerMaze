@@ -14,7 +14,8 @@ void check_transition() {
 		
 	if(defeat) {
 		delay(500);
-		printf("Looser!");
+		display_defeat();
+		game_over_sound();
   		waitpad(255);
  		display_level();
 	} else if(!objectives) {

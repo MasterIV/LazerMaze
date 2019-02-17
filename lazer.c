@@ -59,7 +59,9 @@ UBYTE determine_next_lazer_stat(UBYTE object, UBYTE old_direction) {
 		return LAZER_STATE_NONE;
 	case MapEmpty:
 	case MapMovableEmpty:
-	 	switch (old_direction) {
+	case MapFixedEmpty:
+
+		switch (old_direction) {
 		  case LAZER_DIRECTION_NORTH:
 		  case LAZER_DIRECTION_SOUTH:
 		  	return LAZER_STATE_NORMAL;

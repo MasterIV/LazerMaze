@@ -1,6 +1,7 @@
 #include <gb/gb.h>
 #include <stdio.h>
 #include "tiles.c"
+#include "sounds.c"
 
 UBYTE level_objects[72];
 UBYTE current_level[360];
@@ -11,10 +12,13 @@ void show_title();
 void display_title();
 void show_victory();
 void display_victory();
+void show_defeat();
+void display_defeat();
 
 // bank 2: levels
 void show_level(UBYTE level, UBYTE *dest);
 void display_level();
+
 
 #include "lazer.c"
 #include "background.c"
@@ -45,6 +49,11 @@ void display_victory() {
   show_victory();
 }
 
+void display_defeat() {
+  SWITCH_ROM_MBC1(1);
+  show_defeat();
+}
+
 void main() {  
 
   SPRITES_8x8;
@@ -67,6 +76,7 @@ void main() {
   SHOW_SPRITES;
   display_level();
   cursor_init();
+  init_sound();
   
   while(1) {
 	cursor_update();

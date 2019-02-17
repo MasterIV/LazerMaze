@@ -11,3 +11,4 @@
 #define MapGenerator 128
 #define MapObjective 104
 #define MapMine 132
+#define MapFixedEmpty 140

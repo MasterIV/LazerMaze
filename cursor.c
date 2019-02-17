@@ -86,6 +86,7 @@ void cursor_move(WORD x, WORD y) {
   cursor.dir_x = x;
   cursor.dir_y = y;
   counter = CURSOR_SPEED;
+  move_cursor_sound();
 }
 
 void cursor_update() {
@@ -115,6 +116,11 @@ void cursor_update() {
 }
 
 void cursor_reset() {
+  set_sprite_tile(5, 0);
+  set_sprite_tile(6, 0);
+  set_sprite_tile(9, 0);
+  set_sprite_tile(10, 0);
+	
   counter = 0;
   selected = 0;
   cursor.x = CURSOR_X_MIN;

@@ -20,9 +20,9 @@ const UWORD frequencies[] = { //values based on a formula used by the GB process
 
 enum DurationNote
 {
-    LONG = 0x84U,
-    SHORT = 0x81U,
-    LONG_LONG = 135
+    LONG = 0xF4U,
+    SHORT = 0xF1U,
+    LONG_LONG = 0xF7U
 };
 
 //Define Instrument names
@@ -148,3 +148,10 @@ const Note game_ch2[] = {
   {NONE, SILENCE, LONG_LONG},
 };
 
+const Note completion_notes[] = {
+    {MELODY, D6, SHORT},
+    {MELODY, C6, SHORT},
+    {MELODY, B5, SHORT},
+    {MELODY, A5, SHORT},
+    {MELODY, G5, SHORT},
+};

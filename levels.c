@@ -230,7 +230,68 @@ MapObjective, MapEmpty, MapEmpty, MapGenerator,
 MapFixedEmpty, MapMirrorRight, MapEmpty, MapEmpty, 
 MapEmpty, MapFixedEmpty, MapEmpty, MapMirrorRight, 
 MapMirrorLeft, MapFixedEmpty, MapEmpty, MapEmpty, 
+};
+
+const UBYTE level12[] = {
+MapMine, MapEmpty, MapMovableEmpty, MapSplitterDown, 
+MapObjective, MapEmpty, MapSplitterLeft, MapEmpty, 
+MapObjective, MapMirrorRight, MapMirrorRight, MapEmpty, 
+MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
+MapMovableEmpty, MapMirrorLeft, MapSplitterUp, MapEmpty, 
+MapMine, MapEmpty, MapEmpty, MapSplitterLeft, 
+MapMovableEmpty, MapEmpty, MapMovableEmpty, MapEmpty, 
+MapSplitterRight, MapFixedEmpty, MapEmpty, MapEmpty, 
+MapEmpty, MapEmpty, MapMirrorLeft, MapFixedEmpty, 
+MapMovableObstacle, MapEmpty, MapObjective, MapMirrorLeft, 
+MapEmpty, MapMovableEmpty, MapMirrorRight, MapEmpty, 
+MapEmpty, MapEmpty, MapFixedEmpty, MapEmpty, 
+MapEmpty, MapEmpty, MapSplitterRight, MapEmpty, 
+MapFixedEmpty, MapObjective, MapMovableEmpty, MapGenerator, 
+MapObstacle, MapFixedEmpty, MapFixedEmpty, MapMine, 
+MapFixedEmpty, MapObjective, MapObstacle, MapEmpty, 
+MapFixedEmpty, MapEmpty, MapEmpty, MapEmpty, 
+MapEmpty, MapEmpty, MapEmpty, MapObjective
+};
+
+const UBYTE level13[] = {
+MapObjective, MapMine, MapEmpty, MapEmpty, 
+MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
+MapMine, MapEmpty, MapEmpty, MapEmpty, 
+MapEmpty, MapEmpty, MapSplitterDown, MapFixedEmpty, 
+MapSplitterDown, MapEmpty, MapMine, MapMirrorLeft, 
+MapEmpty, MapEmpty, MapEmpty, MapSplitterUp, 
+MapObstacle, MapEmpty, MapEmpty, MapEmpty, 
+MapEmpty, MapEmpty, MapSplitterDown, MapEmpty, 
+MapEmpty, MapObstacle, MapEmpty, MapMirrorLeft, 
+MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
+MapMirrorLeft, MapEmpty, MapObstacle, MapMovableObstacle, 
+MapEmpty, MapObjective, MapMirrorLeft, MapEmpty, 
+MapMirrorLeft, MapEmpty, MapEmpty, MapEmpty, 
+MapMovableEmpty, MapMine, MapEmpty, MapEmpty, 
+MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
+MapMine, MapEmpty, MapEmpty, MapMovableObstacle, 
+MapEmpty, MapObjective, MapEmpty, MapMirrorRight, 
+MapEmpty, MapMine, MapGenerator, MapEmpty
+};
 
 
-
+const UBYTE level15[] = {
+MapEmpty, MapObjective, MapEmpty, MapMovableEmpty, 
+MapEmpty, MapEmpty, MapMovableEmpty, MapMine, 
+MapEmpty, MapEmpty, MapEmpty, MapMine, 
+MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
+MapSplitterDown, MapSplitterLeft, MapMine, MapEmpty, 
+MapSplitterUp, MapEmpty, MapEmpty, MapMine, 
+MapSplitterUp, MapEmpty, MapEmpty, MapEmpty, 
+MapMine, MapEmpty, MapObstacle, MapMine, 
+MapEmpty, MapSplitterLeft, MapEmpty, MapMine, 
+MapEmpty, MapEmpty, MapEmpty, MapSplitterRight, 
+MapEmpty, MapMovableEmpty, MapMine, MapEmpty, 
+MapEmpty, MapMine, MapSplitterUp, MapEmpty, 
+MapEmpty, MapMine, MapEmpty, MapEmpty, 
+MapMovableEmpty, MapMine, MapEmpty, MapEmpty, 
+MapEmpty, MapEmpty, MapEmpty, MapEmpty, 
+MapEmpty, MapSplitterRight, MapMine, MapEmpty, 
+MapEmpty, MapMine, MapGenerator, MapEmpty, 
+MapMine, MapSplitterDown, MapEmpty, MapEmpty
 };

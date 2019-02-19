@@ -29,8 +29,8 @@ void setNote(Note *n){
                    
             break;
             case WAVE:
-            NR41_REG = 0x3A;
-                NR42_REG = 0xA1;     
+                NR41_REG = 0x3A;
+                NR42_REG = 0x51;     
                 NR43_REG = 0x78;         
                 NR44_REG = 0xC0U;
 
@@ -71,16 +71,21 @@ void update_music() {
 }
 
 void move_cursor_sound() {
-    NR10_REG = 0x4F;
-    NR11_REG = 0x80;
-    NR12_REG = 0x71;
-    NR13_REG = 0x90;
-    NR14_REG = 0x81;
+    // NR10_REG = 0x4F;
+    // NR11_REG = 0x80;
+    // NR12_REG = 0x71;
+    // NR13_REG = 0x90;
+    // NR14_REG = 0x81;
+    NR10_REG = 0x24;
+    NR11_REG = 0xC0;
+    NR12_REG = 0x51;
+    NR13_REG = 0x73;
+    NR14_REG = 0x86;
 }
 
 void explosion_sound() {
     NR41_REG = 0x00;
-    NR42_REG = 0xB8;
+    NR42_REG = 0xF8;
     NR43_REG = 0x7B;
     NR44_REG = 0xC0;
 }
@@ -95,14 +100,11 @@ void mine_windup_sound() {
 
 void title_sound() {
     setNote(&game_ch1[0]);
-    setNote(&game_ch1[1]);
     delay(150);
     setNote(&game_ch1[0]);
-    setNote(&game_ch1[1]);
     delay(150);
     setNote(&game_ch1[0]);
-    setNote(&game_ch1[1]);
-    delay(150);
+    delay(200);
 
     NR10_REG = 0x15;
     NR11_REG = 0x96;
@@ -156,3 +158,20 @@ void game_over_sound() {
     NR14_REG = 0x84;
 }
 
+void game_complete_sound() {
+    setNote(&completion_notes[0]);
+    delay(200);
+    setNote(&completion_notes[1]);
+    delay(200);
+    setNote(&completion_notes[2]);
+    delay(200);
+    setNote(&completion_notes[3]);
+    delay(200);
+    setNote(&completion_notes[4]);
+    delay(300);
+    NR10_REG = 0x77;
+    NR11_REG = 0x07;
+    NR12_REG = 0xF7;
+    NR13_REG = 0xA4;
+    NR14_REG = 0x86;
+}

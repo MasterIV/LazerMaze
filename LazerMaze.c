@@ -37,10 +37,11 @@ void display_title() {
 void display_end() {
   SWITCH_ROM_MBC1(1);
   show_end();
+  game_complete_sound();
 }
 
 void display_level() {
-  if(level > 10 ) {
+  if(level > 13 ) {
   	loop = 0;
 	display_end();
 	return;
